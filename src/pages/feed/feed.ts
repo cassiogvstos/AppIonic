@@ -14,6 +14,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'feed.html',
 })
 export class FeedPage {
+//Criando um objeto que será utilizado pelo JSON  
+  public objeto_feed = {
+    titulo: "Cassio",
+    data: "October 27, 1988",
+    descricao: "Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.",
+    qntd_likes: 12,
+    qntd_comments: 4,
+    time_comment: "11h ago"
+  }
 //Criar uma variavel com modificador de acesso public para que o HTML consiga enxergar
 public nomeDoUsuario:String = "Cassio pagina de feed";
   constructor(public navCtrl: NavController, public navParams: NavParams) {
