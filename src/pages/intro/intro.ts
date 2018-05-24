@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { TabsPage } from '../tabs/tabs';
+import { LoginPage } from '../login/login';
+// import { TabsPage } from '../tabs/tabs';
 
 /**
  * Generated class for the IntroPage page.
@@ -15,7 +16,7 @@ import { TabsPage } from '../tabs/tabs';
   templateUrl: 'intro.html',
 })
 export class IntroPage {
-//Injećão de dependencias.
+//Injecão de dependencias.
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams) {
@@ -26,6 +27,6 @@ export class IntroPage {
   }
 
   goToTabsPage(){
-    this.navCtrl.push(TabsPage)
+    this.navCtrl.push(LoginPage)
   }
 }
