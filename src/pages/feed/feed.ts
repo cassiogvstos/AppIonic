@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ScheduleProvider } from '../../providers/schedule/schedule';
 
 /**
  * Generated class for the FeedPage page.
@@ -12,6 +13,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 @Component({
   selector: 'page-feed',
   templateUrl: 'feed.html',
+  /*O PROVIDERS É O PROVEDOR DE INFORMACÃO, PARA QUE A PÁGINA SAIBA QUE ELE EXISTE TEMOS
+  QUE DECLARA-LO AQUI */
+  providers: [
+    /*AQUI TEMOS QUE INSTANCIAR O PROVIDER O QUE FAZ A INJECÃO É O NOME DA CLASSE*/
+    ScheduleProvider
+  ]
 })
 export class FeedPage {
 //Criando um objeto que será utilizado pelo JSON  
@@ -25,8 +32,11 @@ export class FeedPage {
   }
 //Criar uma variavel com modificador de acesso public para que o HTML consiga enxergar
 public nomeDoUsuario:String = "Cassio pagina de feed";
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    private agendaProvider: ScheduleProvider) {
+    }
   //Exemplo de como somar dois valores
   public somaDeDoisNumeros(num1: number, num2: number): void{
     // alert(num1 + num2);
@@ -34,6 +44,13 @@ public nomeDoUsuario:String = "Cassio pagina de feed";
 
   ionViewDidLoad() {
     // this.somaDeDoisNumeros(100, 200);
+    this.agendaProvider.getLatestSchedule().subscribe(
+      data=>{
+        console.log(data);
+      }, error => {
+        console.log(error);
+      }
+    )
   }
 
 }
