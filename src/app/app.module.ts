@@ -30,7 +30,7 @@ import { ScheduleProvider } from '../providers/schedule/schedule';
     FeedPageModule,
     IntroPageModule,
     LoginPageModule,
-    HttpModule
+    HttpModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [

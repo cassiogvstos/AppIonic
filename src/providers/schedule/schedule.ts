@@ -1,5 +1,5 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
 
 /*
   Generated class for the ScheduleProvider provider.
@@ -14,13 +14,14 @@ import { Injectable } from '@angular/core';
 export class ScheduleProvider {
   //Define a url inicial da API que será consumida
   private baseApiPath = "http://localhost:8000/api";
-  constructor(public http: HttpClient) {
+
+  constructor(public http: Http) {
     console.log('Hello ScheduleProvider Provider');
   }
 
   getLatestSchedule(){
     /*Metodo get para pegar informacões da API e concatenacào com o this.base... 
       que é a url padrão definida acima*/
-    this.http.get(this.baseApiPath + "/user");
+    return this.http.get(this.baseApiPath + "/usuarios");
   }
 }
