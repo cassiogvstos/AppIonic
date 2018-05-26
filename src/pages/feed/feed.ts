@@ -48,6 +48,10 @@ public nomeDoUsuario:String = "Cassio pagina de feed";
     // this.somaDeDoisNumeros(100, 200);
     this.agendaProvider.getLatestSchedule().subscribe(
       data=>{
+        /*Transformando um objeto em um "qualquer coisa", vira string*/
+        const response = (data as any);
+        /*Tranformando o objeto texto em JSON */
+        const objeto_retorno = JSON.parse(response._body);
         console.log(data);
       }, error => {
         console.log(error);

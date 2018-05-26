@@ -22,6 +22,6 @@ export class ScheduleProvider {
   getLatestSchedule(){
     /*Metodo get para pegar informacões da API e concatenacào com o this.base... 
       que é a url padrão definida acima*/
-    return this.http.get(this.baseApiPath + "/usuarios");
+    return this.http.get(this.baseApiPath + "/produtos" + "");
   }
 }

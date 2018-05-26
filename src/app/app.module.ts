@@ -44,7 +44,6 @@ import { ScheduleProvider } from '../providers/schedule/schedule';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ScheduleProvider
   ]
 })
 export class AppModule {}
