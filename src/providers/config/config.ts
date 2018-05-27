@@ -22,7 +22,7 @@ export class ConfigProvider {
   //Grava os dados do localstorage
   setConfigData(showSlide?: boolean, name?: string, username?: string){
       let config = {
-        showSlide: True,
+        showSlide: true,
         name: "",
         username: ""
       };
