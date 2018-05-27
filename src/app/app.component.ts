@@ -34,7 +34,8 @@ export class MyApp {
         this.rootPage = IntroPage;
         configProvider.setConfigData(false);
       }else{
-        this.rootPage = TabsPage; 
+        // this.rootPage = TabsPage;
+        this.rootPage = IntroPage; 
       }
       console.log(config);
 
