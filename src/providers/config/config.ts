@@ -6,7 +6,7 @@ let config_key_name = "config";
 export class ConfigProvider {
 
   private config = {
-    showSlide: false,
+    showSlide: true,
     name:"",
     username:""
   }
