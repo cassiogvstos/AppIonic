@@ -13,21 +13,24 @@
 </ion-header>
 
 <ion-content padding>
+  <!-- O item dentro do ion-card *ng-for é uma diretiva do angular que quer dizer que vai mexer com
+  a estrutura do código no caso do * sera uma diretiva de template vai mexer com toda a estrutura e 
+  o for é um loop -->
+  <!-- <ion-card *ng-For="let usuario of lista_usuarios"> -->
   <ion-card>
-
     <ion-item>
       <ion-avatar item-start>
         <img src="assets/imgs/avatar.png">
       </ion-avatar>
     <!-- criando uma interpolacao {{ }} -->
-      <h2 class="feedTitle">{{ objeto_feed.titulo }}</h2>
-      <p class="feed_date">{{ objeto_feed.data }}</p>
+      <h2 class="feed_Title">{{ usuario.nome }}</h2>
+      <p class="feed_date">{{ usuario.sobrenome }}</p>
     </ion-item>
 
     <img src="assets/imgs/delorion.png">
 
     <ion-card-content>
-      <p>{{ objeto_feed.descricao }}</p>
+      <p>{{ usuario.email }}</p>
     </ion-card-content>
 
     <ion-row>

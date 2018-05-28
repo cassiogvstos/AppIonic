@@ -23,7 +23,7 @@ export class LoginPage {
     console.log('ionViewDidLoad LoginPage');
   }
 //REdirecionando para outra página
-  goToTabsPage(){
-    this.navCtrl.push(TabsPage)
-  }
+goToTabsPage(){
+  this.navCtrl.push(TabsPage)
+}
 }

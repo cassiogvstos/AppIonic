@@ -31,6 +31,14 @@ export class FeedPage {
     qntd_comments: 4,
     time_comment: "11h ago"
   }
+/*Quando colocado um Array <any> isso vira um objeto javascript e você pode acessar o que você quiser
+do objeto */
+public lista_usuarios = new Array<any>();
+
+
+
+
+
 //Criar uma variavel com modificador de acesso public para que o HTML consiga enxergar
 public nomeDoUsuario:String = "Cassio pagina de feed";
   constructor(
@@ -48,11 +56,12 @@ public nomeDoUsuario:String = "Cassio pagina de feed";
     // this.somaDeDoisNumeros(100, 200);
     this.agendaProvider.getLatestSchedule().subscribe(
       data=>{
-        /*Transformando um objeto em um "qualquer coisa", vira string*/
+        /*Transformando um objeto em um tipo de qualquer coisa, sem tipagem*/
         const response = (data as any);
         /*Tranformando o objeto texto em JSON */
         const objeto_retorno = JSON.parse(response._body);
-        console.log(data);
+        this.lista_usuarios = objeto_retorno.usuarios;
+        console.log(objeto_retorno);
       }, error => {
         console.log(error);
       }
