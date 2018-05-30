@@ -13,6 +13,20 @@
 </ion-header>
 
 <ion-content padding>
-  <img src="assets/imgs/MrNavarro.png">
-  <a (click)="goToTabsPage()">Entrar</a>
+  <img src="assets/imgs/Logo.png">
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Username</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-item>
+    <!-- <a style="text-align: center;" (click)="goToTabsPage()">Entrar</a> -->
+    <button ion-button full (click)="goToTabsPage()">Entrar</button>
+  </ion-item>
 </ion-content>

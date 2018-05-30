@@ -35,16 +35,12 @@ export class FeedPage {
 do objeto */
 public lista_usuarios = new Array<any>();
 
-
-
-
-
 //Criar uma variavel com modificador de acesso public para que o HTML consiga enxergar
 public nomeDoUsuario:String = "Cassio pagina de feed";
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    private agendaProvider: ScheduleProvider
+    private ScheduleProvider: ScheduleProvider
     ) {
   }
   //Exemplo de como somar dois valores
@@ -54,7 +50,7 @@ public nomeDoUsuario:String = "Cassio pagina de feed";
 
   ionViewDidLoad(){
     // this.somaDeDoisNumeros(100, 200);
-    this.agendaProvider.getLatestSchedule().subscribe(
+    this.ScheduleProvider.getLatestSchedule().subscribe(
       data=>{
         /*Transformando um objeto em um tipo de qualquer coisa, sem tipagem*/
         const response = (data as any);
