@@ -16,11 +16,22 @@ import { TabsPage } from '../tabs/tabs';
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              public alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
+  }
+
+  showAlert(){
+    let alert = this.alertCtrl.create({ 
+      title: 'Login',
+      subTitle: 'Login realizado com Sucesso!',
+      buttons: ['OK']
+    });
+    alert.present();
   }
 //REdirecionando para outra página
 goToTabsPage(){
