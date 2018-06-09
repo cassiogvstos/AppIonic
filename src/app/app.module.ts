@@ -13,7 +13,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { IntroPageModule } from '../pages/intro/intro.module';
 import { LoginPageModule } from '../pages/login/login.module';
-import { ScheduleProvider } from '../providers/schedule/schedule';
+import { AgendaPage } from '../pages/agenda/agenda';
+import { CadastrarPage } from '../pages/cadastrar/cadastrar';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,9 @@ import { ScheduleProvider } from '../providers/schedule/schedule';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    AgendaPage,
+    CadastrarPage
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,9 @@ import { ScheduleProvider } from '../providers/schedule/schedule';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    AgendaPage,
+    CadastrarPage
   ],
   providers: [
     StatusBar,

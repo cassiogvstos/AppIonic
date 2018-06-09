@@ -13,19 +13,11 @@
 </ion-header>
 
 <ion-content padding>
-  <img src="assets/imgs/logo.png">
-  <!-- <ion-list> -->
-    <ion-item>
-      <ion-label floating><small>Username</small></ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label floating><small>Password</small></ion-label>
-      <ion-input type="password"></ion-input>
-    </ion-item>
-  <!-- </ion-list> -->
-  <ion-item>
+  <ion-card-header>
+    <img src="assets/imgs/logo.png">
+  </ion-card-header>
+  <ion-card-content>
     <!-- <a style="text-align: center;" (click)="goToTabsPage()">Entrar</a> -->
-    <button ion-button full (click)="showAlert(goToTabsPage())">Entrar</button>
-  </ion-item>
+    <button ion-button block (click)="showAlert(goToTabsPage())">Entrar</button>
+  </ion-card-content>
 </ion-content>
