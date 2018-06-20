@@ -10,7 +10,7 @@
   <h3 style="text-align: center;"><small>Lista de Clientes</small></h3>
   <ion-list>
     <button ion-item *ngFor="let u of usuarios" (click)="getUsuario(u._id)">
-      {{ u.nome }} - {{ u.sobrenome }} - {{ u.agendamento }}
+      {{ u.nome }} - {{ u.sobrenome }} - {{ u.email }}
     </button>    
   </ion-list>
 

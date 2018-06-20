@@ -1,11 +1,18 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      About
-    </ion-title>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>About</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-
+  <h3>Local</h3>
+  <p>
+      Estamos aqui <b>@ionic-native/google-maps</b> plugin.
+  </p>
+  <div id="map_canvas">
+      <button ion-button (click)="onButtonClick($event)">Teste</button>
+  </div>
 </ion-content>
